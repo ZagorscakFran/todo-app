@@ -1,6 +1,8 @@
+import "./components.css"
+
 export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
     return (
-      <li>
+      <li className="todo-item">
         <label>
           <input
             type="checkbox"
@@ -9,7 +11,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
           />
           {title}
         </label>
-        <button onClick={() => deleteTodo(id)}>
+        <button className="btn btn-outline-danger" onClick={() => deleteTodo(id)}>
           Delete
         </button>
       </li>

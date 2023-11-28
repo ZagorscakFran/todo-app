@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NewForm } from './Components/NewForm';
 import { TodoList } from './Components/TodoList';
+import "./Components/components.css"
 import "./App.css"
 
 export default function App() {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TodoItem } from './TodoItem';
+import "./components.css"
 
 export function TodoList({ todos, toggleTodo, deleteTodo }) {
   const [filter, setFilter] = useState('all');
@@ -16,15 +17,15 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
   };
 
   return (
-    <div>
+    <div className="filter-buttons">
       <div>
-        <button onClick={() => setFilter('all')}>
+        <button className='btn btn-outline-primary' onClick={() => setFilter('all')}>
           All
         </button>
-        <button onClick={() => setFilter('active')}>
+        <button className='btn btn-outline-primary' onClick={() => setFilter('active')}>
           Active
         </button>
-        <button onClick={() => setFilter('completed')}>
+        <button className='btn btn-outline-primary' onClick={() => setFilter('completed')}>
           Completed
         </button>
       </div>
